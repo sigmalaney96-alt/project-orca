@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orca — Settings (Prototype)</title>
+  <style>
+    body{font-family:Inter, Roboto, Arial; margin:0; background:#0b1220; color:#e6eef8}
+    .settings-root{max-width:1100px;margin:28px auto;padding:20px}
+    .header{display:flex;align-items:center;gap:12px}
+    .logo{width:56px}
+    .card{background:rgba(255,255,255,0.03);padding:16px;border-radius:12px;margin-top:14px}
+    .row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+  </style>
+</head>
+<body>
+  <div class="settings-root">
+    <div class="header">
+      <img src="../branding/orca-logo.svg" class="logo" alt="Orca" />
+      <h1>Orca Settings (Prototype)</h1>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <div>
+          <div style="font-weight:700">Appearance</div>
+          <div style="color:#9fb3d8;font-size:13px">Customize Orca's look and feel</div>
+        </div>
+        <div>
+          <button class="btn">Open</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <div style="font-weight:700">Privacy & security</div>
+          <div style="color:#9fb3d8;font-size:13px">Controls for privacy, cookies, and permissions</div>
+        </div>
+        <div>
+          <button class="btn">Open</button>
+        </div>
+      </div>
+
+      <div class="row" style="border-bottom:none">
+        <div>
+          <div style="font-weight:700">About Orca</div>
+          <div style="color:#9fb3d8;font-size:13px">Version and legal information</div>
+        </div>
+        <div>
+          <button class="btn">About</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,21 +1,19 @@
-# ![Logo](chrome/app/theme/chromium/product_logo_64.png) Chromium
+# Orca (rebrand prototype)
 
-Chromium is an open-source browser project that aims to build a safer, faster,
-and more stable way for all users to experience the web.
+This branch contains the initial, non-destructive prototype changes for rebranding the Chromium fork to "Orca".
 
-The project's web site is https://www.chromium.org.
+What I added in rebrand/orca:
 
-To check out the source code locally, don't use `git clone`! Instead,
-follow [the instructions on how to get the code](docs/get_the_code.md).
+- branding/orca-logo.svg — placeholder Orca logo (SVG)
+- branding/ORCA_BRANDING.md — notes and instructions for further rebrand steps
+- ui/new_tab/orca_ntp.html, .css, .js — prototype New Tab Page (dynamic blue→black gradient, centered search bar, Add Widget button and simple widget system)
+- ui/settings/orca_settings.html — prototype modern Settings scaffold
 
-Documentation in the source is rooted in [docs/README.md](docs/README.md).
+These files are intentionally additive and do not modify existing Chromium source files. They provide a reviewable foundation for migrating components and integrating orca:// pages and settings UI in later, targeted patches.
 
-Learn how to [Get Around the Chromium Source Code Directory
-Structure](https://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code).
+Next steps I will take after you review these additions:
+- Run a repo-wide search and prepare safe replacements for visible "Chrome" → "Orca" occurrences (non-code/test assets first)
+- Begin plumbing for internal scheme orca:// with safe redirects
+- Iterate on the New Tab Page widget API and Settings UI styles
 
-For historical reasons, there are some small top level directories. Now the
-guidance is that new top level directories are for product (e.g. Chrome,
-Android WebView, Ash). Even if these products have multiple executables, the
-code should be in subdirectories of the product.
-
-If you found a bug, please file it at https://crbug.com/new.
+If you want me to land these on a different branch name, or include more assets, tell me and I will adjust.

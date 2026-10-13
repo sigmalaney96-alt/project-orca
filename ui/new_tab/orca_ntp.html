@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orca — New Tab</title>
+  <link rel="stylesheet" href="orca_ntp.css">
+</head>
+<body>
+  <main class="ntp-root">
+    <header class="ntp-header">
+      <img src="../branding/orca-logo.svg" alt="Orca" class="ntp-logo" />
+    </header>
+
+    <section class="ntp-search">
+      <input id="searchInput" class="search-input" placeholder="Search or type a URL" />
+    </section>
+
+    <section class="ntp-controls">
+      <button id="addWidgetBtn" class="btn primary">Add Widget</button>
+    </section>
+
+    <section id="widgets" class="widgets-container">
+      <!-- Widgets will be injected here -->
+    </section>
+
+    <template id="widget-template">
+      <div class="widget">
+        <div class="widget-header">
+          <span class="widget-title">Widget</span>
+          <button class="widget-remove">✕</button>
+        </div>
+        <div class="widget-body">Placeholder</div>
+      </div>
+    </template>
+
+    <div id="addWidgetDialog" class="dialog hidden">
+      <div class="dialog-inner">
+        <h3>Add widget</h3>
+        <div class="widget-list">
+          <button class="widget-option" data-type="clock">Clock</button>
+          <button class="widget-option" data-type="quicklinks">Quick Links</button>
+          <button class="widget-option" data-type="weather">Weather</button>
+        </div>
+        <div class="dialog-actions">
+          <button id="cancelAdd" class="btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="orca_ntp.js"></script>
+</body>
+</html>
